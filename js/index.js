@@ -12,3 +12,11 @@ document.addEventListener("DOMContentLoaded", function(){
         window.location = "products.html"
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const usuarioLogeado = localStorage.getItem('usuarioLogeado');
+    if (!usuarioLogeado) {
+      alert('Debes iniciar sesión para acceder a esta página.');
+      window.location.href = 'login.html';
+    }
+  });
